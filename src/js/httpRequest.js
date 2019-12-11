@@ -9,7 +9,7 @@ import axios from 'axios'
 import qs from 'qs'
 
 // var baseURL = process.env.VUE_APP_BASE_API; //开发配置接口地址
-var baseURL = 'http://121.199.79.177:9999'; //生产配置接口地址
+var baseURL = 'http://localhost:8080'; //生产配置接口地址
 
 axios.defaults.baseURL = baseURL;
 
@@ -26,7 +26,8 @@ function httpRequest(url, method, params = {}) {
             url: url,
             data: JSON.stringify(params),
             dataType: 'json',
-            withCredentials: false,
+            withCredentials: true,
+            crossDomain:true,
         }).then(res => {
             resolve(res);
         }).catch(err => {

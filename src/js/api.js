@@ -5,6 +5,7 @@ var htr = httpRequest.httpRequest;
 import fileApi from './pintu-apis/file'
 var uploadFile = fileApi.uploadFile;
 var getFileUrl = fileApi.getFileUrl;
+
 import userApi from './pintu-apis/user'
 var register = userApi.register;
 var updateUser = userApi.updateUser;

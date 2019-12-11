@@ -1,13 +1,13 @@
 <template>
     <div id="Login">
         <div class="logo">
-            together
+            blog
         </div>
         <div class="input-rect">
             <div class="icon">
                 <font-awesome-icon :icon="['fas','user']" />
             </div>
-            <input v-model="user.email" type="text" placeholder="Enter email"/>
+            <input v-model="user.username" type="text" placeholder="Enter username"/>
         </div>
 
         <div class="input-rect">
@@ -35,7 +35,7 @@
         data () {
             return {
                 user:{
-                    email:"",
+                    username:"",
                     password:"",
                 }
             }
@@ -45,14 +45,14 @@
                 this.$router.push(des);
             },
             login:async function(){
-                if(this.user.email==""||this.user.password=="")return;
+                if(this.user.username==""||this.user.password=="")return;
                 let res = await this.api.userApi.login(this.user);
                 console.log(res);
-                if(res.data.state=="success"){
+                if(res.data.status=="200"){
                     //vuex
                     let user = res.data.data;
-                    localStorage.setItem('userId', user.id);
-                    this.$store.commit('updateUser', user);
+                    //localStorage.setItem('userId', user.id);
+                    //this.$store.commit('updateUser', user);
                     this.routeTo('/');
                 }else{
                     Notification({

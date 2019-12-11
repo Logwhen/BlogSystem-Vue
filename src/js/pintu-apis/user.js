@@ -3,7 +3,7 @@ var htr = httpRequest.httpRequest;
 
 
 var login = function (user) {
-    return htr('/api/v1/user/login', 'post', user);
+    return htr('/login', 'post', user);
 }
 
 var register = function (user) {
