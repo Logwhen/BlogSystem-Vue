@@ -7,7 +7,7 @@ var login = function (user) {
 }
 
 var register = function (user) {
-    return htr('/api/v1/user', 'post', user);
+    return htr('/SignUp', 'post', user);
 }
 
 var getUser = function (id) {

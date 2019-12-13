@@ -1,0 +1,77 @@
+/* PingFang SC */
+
+@font-face {
+    font-family: 'PingFang SC';
+    font-display: fallback;
+    src: url('PingFangSC/PingFang Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PingFang SC';
+    font-display: fallback;
+    src: url('PingFang Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PingFang SC';
+    font-display: fallback;
+    src: url('PingFang Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PingFang SC';
+    font-display: fallback;
+    src: url('PingFang Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Alibaba Puhui */
+
+@font-face {
+    font-family: 'Alibaba Puhui';
+    font-display: fallback;
+    src: url('AlibabaPuhui/Alibaba-PuHuiTi-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alibaba Puhui';
+    font-display: fallback;
+    src: url('AlibabaPuhui/Alibaba-PuHuiTi-Light.otf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alibaba Puhui';
+    font-display: fallback;
+    src: url('AlibabaPuhui/Alibaba-PuHuiTi-Medium.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alibaba Puhui';
+    font-display: fallback;
+    src: url('AlibabaPuhui/Alibaba-PuHuiTi-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alibaba Puhui';
+    font-display: fallback;
+    src: url('AlibabaPuhui/Alibaba-PuHuiTi-Heavy.otf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Alibaba Sans*/

@@ -18,7 +18,7 @@
         </div>
 
         <div class="btn-rect">
-            <div class="btn sign-up-btn" @click="routeTo('register')">
+            <div class="btn sign-up-btn" @click="goto()">
                 Sign up
             </div>
             <div class="btn log-in-btn" @click="login()">
@@ -44,8 +44,13 @@
             routeTo:function(des){
                 this.$router.push(des);
             },
+            goto() {
+      this.$router.replace("/register");
+    },
             login:async function(){
                 if(this.user.username==""||this.user.password=="")return;
+                console.log(this.user.username.length);
+                console.log(this.user.password.length);
                 let res = await this.api.userApi.login(this.user);
                 console.log(res);
                 if(res.data.status=="200"){
