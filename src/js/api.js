@@ -7,8 +7,17 @@ var uploadFile = fileApi.uploadFile;
 var getFileUrl = fileApi.getFileUrl;
 
 import userApi from './pintu-apis/user'
+import blogApi from './pintu-apis/blog'
+import comApi from './pintu-apis/com'
 var register = userApi.register;
 var updateUser = userApi.updateUser;
+var writeblog = blogApi.writeblog;
+var showblog = blogApi.showblog;
+var delblog = blogApi.delblog;
+var seablog = blogApi.seablog;
+
+var writecom=comApi.writecom;
+var getcom=comApi.getcom;
 
 //导入kunyu apis
 import kunyuApi from './pintu-apis/kunyu-api'
@@ -41,10 +50,17 @@ export default {
     htr,
     //example from caocao
     userApi,
+    blogApi,
     uploadFile,
     getFileUrl,
     register,
     updateUser,
+    writeblog,
+    showblog,
+    delblog,
+    seablog,
+    writecom,
+    getcom,
     //下面开始export你们的
     
     yunbo_get,

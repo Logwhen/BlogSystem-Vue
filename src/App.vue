@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      
+
     <!-- <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> -->
     <router-view></router-view>
     <!-- <Tabbar></Tabbar>
