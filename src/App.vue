@@ -9,9 +9,11 @@
 </template>
 
 <script>
+import Bar from "@/src/components/Bar"
 export default {
   name: "app",
   components: {
+    Bar,
   },
   mounted: function(){
 

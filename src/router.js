@@ -5,6 +5,9 @@ import Login from "./components/Login"
 import Register from "./components/Register"
 import PersonInfo from '@/src/components/page_personal/PersonInfo'
 import VueCordova from 'vue-cordova'
+import Personalpage from "./components/Personalpage"
+import Test from "./components/Test"
+import Album from "./components/Album"
 
 Vue.use(VueCordova)
 Vue.use(Router)
@@ -16,6 +19,16 @@ export default new Router({
             path: '/hello',
             name: 'HelloWorld',
             component: HelloWorld,
+        },
+        {
+            path: '/album',
+            name: 'Album',
+            component: Album,
+        },
+        {
+            path: '/test',
+            name: 'Test',
+            component: Test,
         },
         {
             path: '/login',
@@ -32,5 +45,10 @@ export default new Router({
             name:'PersonInfo',
             component:PersonInfo,
         },
+        {
+            path:'/personalpage',
+            name:'Personalpage',
+            component:Personalpage,
+        }
     ]
 })

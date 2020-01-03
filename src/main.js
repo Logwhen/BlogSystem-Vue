@@ -42,6 +42,8 @@ import $ from 'jquery'
 Vue.prototype.$=$;
 Vue.config.productionTip = false;
 
+
+
 new Vue({
     router: router,
     store: store,
