@@ -11,6 +11,8 @@ import BlogDetail from './components/BlogDetail.vue'
 import ViewBlog from './components/ViewBlog.vue'
 import SearchBlog from './components/SearchBlog.vue'
 import VueCordova from 'vue-cordova'
+import Personalpage from "./components/Personalpage"
+import Album from "./components/Album"
 
 Vue.use(VueCordova)
 Vue.use(Router)
@@ -67,7 +69,18 @@ export default new Router({
             path:'/searchblog',
             name:'SearchBlog',
             component:SearchBlog,
+        },
+        {
+            path: '/album',
+            name: 'Album',
+            component: Album,
+        },
+        {
+            path:'/personalpage',
+            name:'Personalpage',
+            component:Personalpage,
         }
+
     ]
 })
 const routerPush = Router.prototype.push
