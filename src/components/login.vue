@@ -18,7 +18,7 @@
         </div>
 
         <div class="btn-rect">
-            <div class="btn sign-up-btn" @click="goto()">
+            <div class="btn sign-up-btn" @click="routeTo('register')">
                 Sign up
             </div>
             <div class="btn log-in-btn" @click="login()">
@@ -44,9 +44,6 @@
             routeTo:function(des){
                 this.$router.push(des);
             },
-            goto() {
-      this.$router.replace("/register");
-    },
             login:async function(){
                 if(this.user.username==""||this.user.password=="")return;
                 console.log(this.user.username.length);
@@ -56,9 +53,7 @@
                 if(res.data.status=="200"){
                     //vuex
                     let user = res.data.data;
-                    //localStorage.setItem('userId', user.id);
-                    //this.$store.commit('updateUser', user);
-                    this.routeTo('/');
+                    this.routeTo('/personalpage');
                 }else{
                     Notification({
                         title:"用户不存在或密码错误。",
