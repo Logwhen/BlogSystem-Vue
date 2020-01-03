@@ -11,7 +11,7 @@ var register = function (user) {
 }
 
 var getUser = function (id) {
-    return htr('user/findUser', 'get');
+    return htr('user/findUser', 'post',id);
 }
 
 var updateUser = function (id, user) {

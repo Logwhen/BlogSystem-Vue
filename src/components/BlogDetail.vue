@@ -105,6 +105,7 @@
                 //console.log(res);
             },
             idname:async function(uesrid){
+                console("aaaaaaaaaaaaaa");
                 console.log(userid);
                 let res=await this.api.getUser(userid);
                 console.log(res);
