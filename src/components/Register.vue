@@ -18,7 +18,7 @@
                 </div>
                 <input v-model="user.password" type="text" placeholder="  Enter password"/>
             </div>
-            <div class="log-btn" @click="register(isFormCorrect)">注册</div>
+            <div class="log-btn" @click="register(isFormCorrect);">注册</div>
         </div>
     </div>
 </template>
