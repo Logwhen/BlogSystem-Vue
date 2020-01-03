@@ -20,10 +20,21 @@
                     </li>
                 </ul>
             </div>
+            <img class="favour-icon" src="@/src/assets/favour_icon.png" @click="favour()">
         </div><br/>
         <div class="comment-line">
             <div class="comments">
-
+                <ul>
+                    <li v-for="c in comments">
+                <div class="username">
+                    {{c.userid}}
+                </div>
+                <div class="comment">
+                    <p v-html="c.content">
+                        {{c.content}}</p>
+                </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -41,11 +52,14 @@
                     userid:"",
                     blogid:"",
                     title:"",
-                    contnet:"",
+                    content:"",
                     time:"",
                     abstract:""
                 },
-                blogid:"",
+                comment:{
+                    blogid:"",
+                },
+                comments:[],
                 msg:'',
 
             }
@@ -54,6 +68,7 @@
             this.getblogs();
             this.getblogid();
             this.getcoms();
+            this.idname("10");
         },
         beforeCreate () {
             document.querySelector('body').setAttribute('style', 'background-color:#efeff4;')
@@ -66,7 +81,7 @@
             },
             getblogid:async function(){
                 this.bid=localStorage.getItem('bid');
-                this.blogid=this.bid;
+                this.comment.blogid=this.bid;
                 //console.log(this.blogid);
             },
             filterlist(){
@@ -79,10 +94,20 @@
             },
             getcoms:async function()
             {
-                console.log(this.blogid)
-                let res=await this.api.getcom(this.blogid);
-
-
+                let res=await this.api.getcom(this.comment);
+                this.comments=res.data.result;
+                //console.log(this.comments);
+            },
+            favour:async function()
+            {
+                console.log(this.bid);
+                let res=await this.api.addfavour(this.bid);
+                //console.log(res);
+            },
+            idname:async function(uesrid){
+                console.log(userid);
+                let res=await this.api.getUser(userid);
+                console.log(res);
             }
         },
         watch: {
@@ -135,6 +160,15 @@
         font-size: 25px;
         width: 10rem;
         margin: 0.2rem auto;
+    }
+    .favour-icon
+    {
+        height:24px;
+        width:24px;
+        float:right;
+        margin-right: 39vw;
+        margin-top: .1rem;
+        margin-bottom: .2rem;
     }
     .comment-line
     {

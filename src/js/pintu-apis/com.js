@@ -6,8 +6,8 @@ var writecom = function (comment) {
     return htr('/comment/add', 'post', comment);
 }
 
-var getcom=function(blogid) {
-    return htr('/comment/get/'+blogid, 'post');
+var getcom=function(comments) {
+    return htr('/comment/get', 'post',comments);
 }
 
 export default {
