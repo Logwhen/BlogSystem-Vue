@@ -19,8 +19,8 @@
                                 {{n.content}}</p>
                         </div>
                         <img class="del-icon" src="@/src/assets/del_icon.png" @click="delblog(n.blogid)">
-                        <p>  </p>
                         <img class="com-icon" src="@/src/assets/com_icon.png" @click="comblog(n.blogid)">
+                        <img class="favour-icon" src="@/src/assets/favour_icon.png" @click="favour(n.blogid)">
                         <div class="get-time">
                             {{n.time}}
                         </div><br/>
@@ -121,6 +121,11 @@
             },
             clickCancel(){
                 console.log('取消');
+            },
+            favour:async function(blogid){
+                console.log(blogid);
+                let res=await this.api.addfavour(blogid);
+                console.log(res);
             },
             async clickDelete(blogid) {
                 let res = await this.api.delblog(blogid);
@@ -252,6 +257,7 @@
         height: 0.8rem;
         margin: 0.2rem auto;
         display: -webkit-box;
+        word-wrap:break-word;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3; /*截取第三行*/
         overflow: hidden;
@@ -263,6 +269,13 @@
         float:right;
     }
     .com-icon
+    {
+        margin-right: .1rem;
+        height:24px;
+        width:24px;
+        float:right;
+    }
+    .favour-icon
     {
         margin-right: .1rem;
         height:24px;

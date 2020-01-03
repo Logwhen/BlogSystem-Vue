@@ -9,8 +9,10 @@ var getFileUrl = fileApi.getFileUrl;
 import userApi from './pintu-apis/user'
 import blogApi from './pintu-apis/blog'
 import comApi from './pintu-apis/com'
+import favApi from './pintu-apis/favour'
 var register = userApi.register;
 var updateUser = userApi.updateUser;
+
 var writeblog = blogApi.writeblog;
 var showblog = blogApi.showblog;
 var delblog = blogApi.delblog;
@@ -18,6 +20,9 @@ var seablog = blogApi.seablog;
 
 var writecom=comApi.writecom;
 var getcom=comApi.getcom;
+
+var addfavour=favApi.addfavour;
+var getfavour=favApi.getfavour;
 
 //导入kunyu apis
 import kunyuApi from './pintu-apis/kunyu-api'
@@ -61,6 +66,8 @@ export default {
     seablog,
     writecom,
     getcom,
+    addfavour,
+    getfavour,
     //下面开始export你们的
     
     yunbo_get,
